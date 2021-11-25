@@ -28,7 +28,7 @@ app.get("/", function (req, res) {
       { maxAge: 900000, httpOnly: true }
     );
   }
-  res.send("Hello World");
+  res.send("<html><body>Hello! If you refresh page you will get a default profile cookie. <p />Try desirialization injection. <p />More info -> https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/</body></html>");
 });
 
 

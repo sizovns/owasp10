@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+  a01:
+    build: A01_broken_access_control/.
+    ports:
+      - "8001:8001"
+    restart: always
+  
+  a02_a03_command:
+    build: A02_A03_injection/command/.
+    ports:
+      - "8002:8001"
+    restart: always
+
+  a02_a03_sqli:
+    build: A02_A03_injection/sqli/.
+    ports:
+      - "8003:8001"
+    restart: always
+
+  a02_a03_ssti:
+    build: A02_A03_injection/ssti/.
+    ports:
+      - "8004:8001"
+    restart: always
+
+  a04:
+    build: A04_insecure_design/.
+    ports:
+      - "8005:8001"
+    restart: always
+
+  a05_a07:
+    build: A05_A07_security_misconfiguration/.
+    ports:
+      - "8006:8001"
+    restart: always
+
+  a06:
+    build: A06_vulnerable_and_outdated_components/.
+    ports:
+      - "8007:80"
+    restart: always
+
+  a08:
+    build: A08_software_and_data_integrity_failures/.
+    ports:
+      - "8008:8001"
+    restart: always
+
+  a10:
+    build: A10_server_side_request_forgery/.
+    ports:
+      - "8009:8001"
+    restart: always
+
+
