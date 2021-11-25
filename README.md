@@ -1,7 +1,9 @@
 # OWASP TOP 10 Training
-## [OWASP TOP 10 2021)[https://owasp.org/www-project-top-ten/]
+## [OWASP TOP 10 2021](https://owasp.org/www-project-top-ten/)
 The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.
+
 > Globally recognized by developers as the first step towards more secure coding.
+
 Companies should adopt this document and start the process of ensuring that their web applications minimize these risks. Using the OWASP Top 10 is perhaps the most effective first step towards changing the software development culture within your organization into one that produces more secure code.
 
 Top 10 Web Application Security Risks
@@ -20,16 +22,21 @@ There are three new categories, four categories with naming and scoping changes,
 
 ## Overview
 It is machines for education of OWASP TOP 10 2021 year.
+
 Here you cat try to learn more about OWASP TOP 10 vulnerabilities.
+
 **What you can learn:**
 1. How vulnerability look like in the Node JS code.
 2. How to use this vulnerability.
+
 ## How to use
 * Install docker and docker-compose
 * Clone project
 * Start machines -> command `docker-compose up -d` from project root directory
 * Find a flag `flag{s0m3-t3xt}`
+
 ## A little bit help
-In some directories with difficult machines you can see file how_to.txt and there are how to solve this machines.
-## Happy hacking
+In some directories with difficult machines you can see file `how_to.txt` there are how to solve this machines.
+
+### Happy hacking
 
