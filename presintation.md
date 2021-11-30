@@ -1,4 +1,4 @@
-# Комментарии к презинтации
+# Комментарии к презентации
 ## 3 о OWASP
 OWASP - Open Web Application Security Project
 
