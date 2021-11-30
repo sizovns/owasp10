@@ -31,8 +31,14 @@ services:
       - "8005:8001"
     restart: always
 
-  a05_a07:
-    build: A05_A07_security_misconfiguration/.
+  a05:
+    build: A05_security_misconfiguration/.
+    ports:
+      - "8010:8001"
+    restart: always
+
+  a07:
+    build: A07_identification_and_authentication_failures/.
     ports:
       - "8006:8001"
     restart: always

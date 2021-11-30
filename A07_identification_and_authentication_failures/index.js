@@ -19,7 +19,7 @@ app.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
   if (username === 'admin' && password === 'admin') {
-    res.send("flag{$3cur1ty_m1$c0nf1gurat10n}");
+    res.send("flag{1d3ntificat1on_4nd_4uth3nt1c4t1on_f41lur3s}");
     return;
   }
   res.send("Incorrect username or password");
