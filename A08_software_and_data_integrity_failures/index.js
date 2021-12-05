@@ -1,7 +1,7 @@
-const express = require("express");
-const cookieParser = require("cookie-parser");
-const escape = require("escape-html");
-const serialize = require("node-serialize");
+import express from "express";
+import cookieParser from "cookie-parser";
+import escape from "escape-html";
+import { unserialize } from "node-serialize";
 const app = express();
 const port = 8001;
 
@@ -10,12 +10,12 @@ app.use(cookieParser());
 app.get("/", function (req, res) {
   if (req.cookies.profile) {
     const str = new Buffer.from(req.cookies.profile, "base64").toString();
-    const obj = serialize.unserialize(str);
+    const obj = unserialize(str);
     if (obj.username) {
       res.send("Hello " + escape(obj.username));
       return;
     }
-    if (req.cookies.profile == "eyJyY2UiOiJfJCRORF9GVU5DJCRfcmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWMoJ2NhdCBmbGFnLnR4dCcsIGZ1bmN0aW9uKGVycm9yLCBzdGRvdXQsIHN0ZGVycikgeyBjb25zb2xlLmxvZyhzdGRvdXQpIH0pIn0="){
+    if (req.cookies.profile == "eyJyY2UiOiJfJCRORF9GVU5DJCRfcmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWMoJ2NhdCBmbGFnLnR4dCcsIGZ1bmN0aW9uKGVycm9yLCBzdGRvdXQsIHN0ZGVycikgeyBjb25zb2xlLmxvZyhzdGRvdXQpIH0pIn0=") {
       require('child_process').exec('cat flag.txt', (error, stdout, stderr) => {
         res.send(stdout);
       });

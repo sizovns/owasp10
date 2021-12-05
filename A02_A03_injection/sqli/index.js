@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 8001;
-const db = require("./database.js");
+import { all } from "./database.js";
 
 app.get("/", (req, res) => {
   res.send(
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/users", (req, res) => {
-  db.all("select id, username from user", function (error, results) {
+  all("select id, username from user", function (error, results) {
     if (error) {
       res.status(400).json({ message: error.message });
       return;
@@ -30,7 +30,7 @@ app.get("/api/users", (req, res) => {
 app.get("/api/user/:id", (req, res) => {
   const sql = `SELECT id,username FROM user WHERE id = ${req.params.id}`;
   console.log("Query: " + sql);
-  db.all(sql, function (error, results) {
+  all(sql, function (error, results) {
     if (error) {
       res.status(400).json({ message: error.message });
       return;

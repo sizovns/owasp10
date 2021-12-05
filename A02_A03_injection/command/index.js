@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const exec = require("child_process").exec;
+import { exec } from "child_process";
 
 app.get("/", function (req, res) {
   if (Object.keys(req.query).length === 0) {

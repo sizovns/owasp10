@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const bodyParser = require("body-parser");
+import { urlencoded } from "body-parser";
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(urlencoded({ extended: false }));
 
 // Route to Homepage
 app.get("/", (req, res) => {
