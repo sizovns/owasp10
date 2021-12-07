@@ -6,21 +6,27 @@ services:
     ports:
       - "8001:8001"
     restart: always
+
+  a02:
+    build: A02_cryptographic_failures/.
+    ports:
+      - "8011:8001"
+    restart: always
   
-  a02_a03_command:
-    build: A02_A03_injection/command/.
+  a03_command:
+    build: A03_injection/command/.
     ports:
       - "8002:8001"
     restart: always
 
-  a02_a03_sqli:
-    build: A02_A03_injection/sqli/.
+  a03_sqli:
+    build: A03_injection/sqli/.
     ports:
       - "8003:8001"
     restart: always
 
-  a02_a03_ssti:
-    build: A02_A03_injection/ssti/.
+  a03_ssti:
+    build: A03_injection/ssti/.
     ports:
       - "8004:8001"
     restart: always

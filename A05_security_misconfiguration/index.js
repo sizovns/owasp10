@@ -1,10 +1,10 @@
-import express from "express";
-import { parseXml } from "libxmljs";
+const express = require("express");
+const libxml = require("libxmljs");
 const app = express();
 const port = 8001;
-import { text } from "body-parser";
+const bodyParser = require("body-parser");
 
-app.use(text({ type: "application/xml" }));
+app.use(bodyParser.text({ type: "application/xml" }));
 
 app.get("/", (req, res) => {
   res.send(
@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 app.post("/parser", (req, res) => {
   let xmlPayload = req.body;
   try {
-    var doc = parseXml(xmlPayload, { noent: true });
+    var doc = libxml.parseXml(xmlPayload, { noent: true });
     res.send(doc.toString());
   } catch (e) {
     res.send("Xml parsing error" + e);

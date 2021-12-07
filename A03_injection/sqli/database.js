@@ -28,4 +28,4 @@ let db = new sqlite3.Database("./db/test.db", sqlite3.OPEN_READWRITE, (err) => {
   console.log("Connected to the test database.");
 });
 
-export default db;
+module.exports = db;

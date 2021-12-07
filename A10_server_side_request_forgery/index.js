@@ -1,5 +1,5 @@
-import { get } from "needle";
-import express from "express";
+var needle = require('needle');
+var express = require("express");
 var app = express();
 const port = 8001;
 // Currently this app is also vulnerable to reflective XSS as well. Kind of an easter egg :)
@@ -23,7 +23,7 @@ app.get("/", function (request, response) {
 
   console.log("New request: " + request.url);
 
-  get(url, { timeout: 3000 }, function (error, response1) {
+  needle.get(url, { timeout: 3000 }, function (error, response1) {
     if (!error && response1.statusCode == 200) {
       response.writeHead(200, { "Content-Type": "text/" + mime });
       response.write("<h1>Welcome to SSRF demo.</h1>\n\n");

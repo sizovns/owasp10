@@ -13,5 +13,6 @@
     "cookie-parser": "^1.4.6",
     "express": "^4.17.1",
     "node-serialize": "^0.0.4"
-  }
+  },
+  "type": "module"
 }
